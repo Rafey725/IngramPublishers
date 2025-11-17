@@ -7,7 +7,7 @@ const Crousal = () => {
       <button className=''>
         <img src="/arrow.svg" alt="" className='-rotate-90 text-[#3a7c92] border rounded-full px-2 py-2' />
       </button>
-      <div className='bg-blue-400 max-w-[1032px] w-full h-full'></div>
+      <div className='max-w-[1032px] w-full h-full'></div>
       <button className=''>
         <img src="/arrow.svg" alt="" className='rotate-90 text-[#3a7c92] border rounded-full px-2 py-2' />
       </button>

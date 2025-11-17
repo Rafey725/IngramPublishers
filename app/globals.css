@@ -22,4 +22,27 @@
 
 body {
   background-color: #ffffff;
+  overflow-x: hidden;
+  /* font-family: sans-serif; */
+}
+
+a,
+button,
+h1,
+h2,
+input{
+  font-family: sans-serif;
+}
+
+.insta-bg {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 30px;
+  /* optional rounded corners */
+  background: #2e2e2e;
+  transition: background 0.3s ease;
+}
+
+.insta-bg:hover {
+  background: linear-gradient(45deg, #f58529, #f97380, #dd2a7b, #8a3ab9, #5b51d8);
 }
