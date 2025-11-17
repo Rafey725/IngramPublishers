@@ -9,6 +9,11 @@ const nextConfig = {
       },
     ],
   },
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    turbo: true,
+  },
   async rewrites() {
     return [
       {

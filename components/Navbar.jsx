@@ -18,15 +18,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-
-            {/* hamburger */}
-            <div className='flex lg:hidden flex-col items-center justify-center gap-1'>
-                <div className='w-4.5 h-0.5 rounded-[4px] bg-[#a5a5a5]'></div>
-                <div className='w-4.5 h-0.5 rounded-[4px] bg-[#a5a5a5]'></div>
-                <div className='w-4.5 h-0.5 rounded-[4px] bg-[#a5a5a5]'></div>
-            </div>
-            {/* navbar links */}
-            <div className='relative z-20 flex justify-center items-center bg-[#3a7c92] text-white w-full h-[60px]'>
+            <div className='flex justify-center items-center bg-[#3a7c92] text-white w-full h-[60px]'>
                 <div className='flex justify-between items-center max-w-[76vw] w-full h-full'>
                     <div className='flex items-center w-full h-full'>
                         <ul className='flex gap-2 items-center font-[sans-serif] h-full'>
