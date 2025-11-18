@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-/* eslint-disable @next/next/no-img-element */
 import PublishHeroBanner from '@/components/PublishHeroBanner'
+import Image from 'next/image';
 import React from 'react'
 
 export const metadata = {
@@ -73,17 +73,17 @@ const HowItWorks = () => {
                     <div className='w-full bg-[#f7f8f9] px-5 py-8 flex flex-col gap-2 items-center justify-between rounded-[13px]'>
                         <div className='w-full h-full flex items-center flex-col'>
                             <div className='w-[90px] h-[70px]'>
-                                <img src="/publish.webp" alt="image" className='object-cover' />
+                                <Image src="/publish.webp" alt="image" className='object-cover' />
                             </div>
                             <h1 className='text-[22px] font-bold'>Publish</h1>
                             <p className='text-[16px] max-w-[345px] md:max-w-[245px] text-center font-[sans-serif]'>Whether hardcover, paperback, or ebooks, you can publish your book the way you want, with the quality you need. Explore our publishing options and find what’s right for your book</p>
                         </div>
                         <button className='text-[16px] text-white w-45 h-10 mt-1 bg-[#4e9eb8] hover:bg-[#4e9eb8]/80 rounded-[7px] cursor-pointer transition duration-300'>Plan Your Book</button>
                     </div>
-                    <div className='w-full bg-[#f7f8f9] w-full px-5 py-8 flex flex-col gap-2 items-center justify-between rounded-[13px]'>
+                    <div className='w-full bg-[#f7f8f9] px-5 py-8 flex flex-col gap-2 items-center justify-between rounded-[13px]'>
                         <div className='w-full h-full flex items-center flex-col'>
                             <div className='w-[90px] h-[70px]'>
-                                <img src="/shipping.webp" alt="image" className='object-cover' />
+                                <Image src="/shipping.webp" alt="image" className='object-cover' />
                             </div>
                             <h1 className='text-[22px] font-bold'>Distribute</h1>
                             <p className='text-[16px] max-w-[345px] md:max-w-[245px] text-center font-[sans-serif]'>IngramSpark offers global ebook and print distribution from one platform. Connect your book to over 45,000 libraries, retailers, and online stores like Amazon, Apple, and Barnes & Noble.</p>

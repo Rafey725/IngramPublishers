@@ -55,11 +55,14 @@ const Navbar = () => {
 
             {/* hamburger */}
             <div
-                onClick={handleHamburger}
-                className='flex lg:hidden flex-col items-center justify-center gap-1 cursor-pointer'>
-                <div className='w-4.5 h-0.5 rounded-[4px] bg-[#a5a5a5]'></div>
-                <div className='w-4.5 h-0.5 rounded-[4px] bg-[#a5a5a5]'></div>
-                <div className='w-4.5 h-0.5 rounded-[4px] bg-[#a5a5a5]'></div>
+                className='flex lg:hidden flex-col items-center justify-center'>
+                <button
+                    onClick={handleHamburger}
+                    className="flex flex-col  gap-1 cursor-pointer">
+                    <span className="w-5 h-[3px] bg-[#a5a5a5] rounded-[1px]"></span>
+                    <span className="w-5 h-[3px] bg-[#a5a5a5] rounded-[1px]"></span>
+                    <span className="w-5 h-[3px] bg-[#a5a5a5] rounded-[1px]"></span>
+                </button>
             </div>
 
             {/* hamburger dropdown */}
@@ -157,7 +160,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </li>
-                
+
             </ul>
 
             {/* navbar links */}

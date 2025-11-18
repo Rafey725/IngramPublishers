@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='w-screen h-auto sm:h-[580px] bg-[#444546] text-white flex justify-between items-center gap-10 flex-col px-10 py-5 border-t'>
+    <div className='max-w-screen w-full h-auto sm:h-[580px] bg-[#444546] text-white flex justify-between items-center gap-10 flex-col px-10 py-5 border-t'>
       <div className='w-[350px] sm:max-w-[1090px] sm:w-full h-auto sm:h-[380px] flex justify-between flex-col sm:flex-row gap-10'>
         {/* form */}
         <div className='sm:max-w-[305px] w-full h-auto px-2'>

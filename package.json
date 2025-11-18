@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
+    "mob": "next dev --webpack --hostname 192.168.2.146",
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint"

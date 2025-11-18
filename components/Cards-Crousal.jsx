@@ -83,11 +83,11 @@ const CardsCrousal = () => {
   }, [currentSlide])
 
   return (
-    <div className='relative sm:h-[480px] w-full bg-[#f0fbfc] flex justify-center items-center gap-8 px-5'>
+    <div className='relative sm:h-[480px] w-full bg-[#f0fbfc] flex justify-center items-center gap-10 px-5'>
       <button
         onClick={handlePrevious}
         onTouchStart={handlePrevious}
-        className='absolute z-20 left-5 top-1/2 md:relative w-10 h-10 flex items-center justify-center border border-[#3a7c92] rounded-full cursor-pointer'>
+        className='sm:absolute z-20 left-5 top-1/2 md:relative md:right-0 md:top-0 w-10 h-10 flex items-center justify-center border border-[#3a7c92] rounded-full cursor-pointer'>
         <img src="/arrow.svg" alt="arrow" className='w-full h-full block -rotate-90 ml-2.5' />
       </button>
 
@@ -125,7 +125,7 @@ const CardsCrousal = () => {
                   <div className={`${index === 4 ? 'w-[270px] sm:max-w-[540px] text-center ' : 'w-[270px]'}`}>
                     <p className='sm:text-[22px] text-center sm:text-start font-normal text-wrap'>{slide.description}</p>
                   </div>
-                  <button className='w-[190px] sm:w-[220px] h-[48px] bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
+                  <button className='w-[190px] sm:w-[220px] h-12 bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
                 </div>
                 <div>
                   <img src={slide.image} alt="image" className={`shrink-0 max-w-[${slides[0].w}] h-[${slides[0].h}] w-[380px] md:w-full max-h-[380px]`} />
@@ -156,7 +156,7 @@ const CardsCrousal = () => {
       <button
         onClick={handleNext}
         onTouchStart={handleNext}
-        className='absolute z-20 right-5 top-1/2 md:relative w-10 h-10 flex items-center justify-center border border-[#3a7c92] rounded-full cursor-pointer'>
+        className='absolute z-20 right-5 top-1/2 md:relative md:right-0 md:top-0 w-10 h-10 flex items-center justify-center border border-[#3a7c92] rounded-full cursor-pointer'>
         <img src="/arrow.svg" alt="arrow" className='w-full h-full block rotate-90 mr-3' />
       </button>
 

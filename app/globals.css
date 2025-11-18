@@ -4,7 +4,7 @@
 :root {
   /* --background: #ffffff;
   --foreground: #171717; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 @theme inline {
@@ -23,15 +23,20 @@
 
 body {
   background-color: #ffffff;
-  overflow-x: hidden;
+  width: 100%;
+  /* overflow-x: hidden; */
   /* font-family: sans-serif; */
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a,
 button,
 h1,
 h2,
-input{
+input {
   font-family: sans-serif;
 }
 
@@ -47,17 +52,20 @@ input{
 .insta-bg:hover {
   background: linear-gradient(45deg, #f58529, #f97380, #dd2a7b, #8a3ab9, #5b51d8);
 }
+
 @keyframes scroll {
-  from{
+  from {
     transform: translateX(0);
   }
-  to{
+
+  to {
     transform: translateX(-105%);
-  } 
+  }
 }
 
-.parallax-bg {
-  background-image: url('/self-publish-page-bg1.jpg');
+.first-bg,
+.second-bg {
+  /* background-image: url('/self-publish-page-bg1.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 center;
@@ -66,6 +74,21 @@ input{
   /* display: flex;
   justify-content: center;
   align-items: center; */
+}
+
+@media (min-width: 1025px) {
+
+  .first-bg
+  {
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: 0% 14%;
+}
+
+.second-bg {
+  background-position: 0 14%;
+}
+
 }
 
 .content {
