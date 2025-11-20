@@ -27,7 +27,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "components/ProvidedApp.jsx"
   ],
   "exclude": [
     "node_modules"

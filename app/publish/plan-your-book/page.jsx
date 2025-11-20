@@ -12,7 +12,6 @@ export const metadata = {
 };
 
 const PlanYourBook = () => {
-
     return (
       <PlanYourBookComp />
     )

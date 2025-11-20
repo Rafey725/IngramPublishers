@@ -36,7 +36,9 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "pages/publish/how-to-self-publish/8Steps-SelfPublish/SelfPublishingSteps.jsx",
+    "components/ProvidedApp.jsx"
   ],
   "exclude": [
     "node_modules"

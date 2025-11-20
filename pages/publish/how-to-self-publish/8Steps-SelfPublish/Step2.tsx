@@ -23,7 +23,7 @@ const Step2 = () => {
     ];
 
     return (
-        <div className="max-w-[48.75rem] md:w-[26.25rem] lg:w-[38.75rem] xl:w-[48.75rem] px-5 py-6">
+        <div className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
             { /* Step 2: Book Editing */}
             <div className="mb-7">
                 <h2 className="text-[clamp(24px,4vw,32px)] text-[#4e9eb8] font-bold mb-4 border-l-4 border-[#ffca38] pl-4">
@@ -46,7 +46,7 @@ const Step2 = () => {
                     </h2>
                 </div>
                 {/* right side */}
-                <div className="flex flex-col lg:flex-row lg:justify-start gap-y-0.25rem py-10 px-5">
+                <div className="flex flex-col lg:flex-row lg:justify-start gap-y-[0.65rem] pt-5 pb-10 lg:py-10 px-5">
                     <div className="relative shrink-0 w-full lg:w-[17.5rem] h-[18.75rem] lg:h-[25.875rem] lg:-ml-5 flex items-center justify-center">
                         <Image src="/8StepsImages/image2.webp" alt="Editing Image" fill className="object-contain" />
                     </div>

@@ -3,6 +3,8 @@ import ProsList from './ProsList';
 import StickyBar from './StickyBar';
 import BgBanner from './BgBanner';
 import SelfPublishingSteps from './8Steps-SelfPublish/SelfPublishingSteps';
+import { useRef } from 'react';
+import ScrollIntoView from '@/components/ScrollIntoView'
 
 const HowToSelfPublish = () => {
   const prosList: { heading: string, description: string }[] = [
@@ -31,8 +33,10 @@ const HowToSelfPublish = () => {
     { before: 'How should I ', bold: 'price my book', after: '?' },
     { before: 'How much ', bold: 'money', after: ' do authors make?' }
   ];
+
   return (
     <div>
+      <ScrollIntoView />
       {/* hero section */}
       <div className="first-bg bg-[url('/self-publish-page-bg1.jpg')] max-w-screen max-h-screen h-[40vh] lg:h-[50vh] flex">
         <div className="content w-full h-full flex flex-col items-center justify-center gap-6 px-4 py-4 text-center">
@@ -83,11 +87,11 @@ const HowToSelfPublish = () => {
         </div>
 
         {/* benefits banner*/}
-        <BgBanner bgImage="/self-publish-page-bg2.jpg" heading1="Benefits of Self-" heading2="Publishing" />
+        <BgBanner id='benefits-to-publish' bgImage="/self-publish-page-bg2.jpg" heading1="Benefits of Self-" heading2="Publishing" />
 
         {/* pros of self publishing */}
         <div className='max-w-[1250px] flex justify-start mx-auto my-12 sm:px-5 md:px-10'>
-          <div className="max-w-[780px] md:w-[420px] lg:w-[620px] xl:w-[780px] px-5 py-6">
+          <div className="max-w-[780px] md:w-[clamp(26.25rem,16vw,37rem)] lg:w-[620px] xl:w-[780px] px-5 py-6">
             {/* heading */}
             <h1 className="text-[20px] sm:text-[24px] md:text-[20px] xl:text-[30px] font-bold mb-3">
               There are so many <span className="text-[#4e9eb8] underline">pros of self-publishing</span> a book.
@@ -108,12 +112,14 @@ const HowToSelfPublish = () => {
           </div>
         </div>
 
-        {/* 8 steps to self-publishing a book */}
-        {/* steps banner */}
-        <BgBanner bgImage="/self-publish-page-bg3.jpg" heading1="8 Steps to" heading2="Self-Publishing a Book" />
+        {/* 8steps banner */}
+        <BgBanner id='8steps-ti-publish' bgImage="/self-publish-page-bg3.jpg" heading1="8 Steps to" heading2="Self-Publishing a Book" />
 
-        {/* steps */}
-        <SelfPublishingSteps />
+        {/* 8 steps to self-publishing a book */}
+        <SelfPublishingSteps/>
+
+        {/* costs to self publish */}
+        <BgBanner id='costs-to-publish' bgImage='/self-publish-page-bg4.jpg' heading1='How Much Does It Cost to Self-Publish a Book?' />
       </main>
     </div>
 

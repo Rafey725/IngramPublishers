@@ -49,10 +49,10 @@ const Step4 = () => {
 
 
     return (
-        <div className="max-w-[48.75rem] md:w-[26.25rem] lg:w-[38.75rem] xl:w-[48.75rem] px-5 py-6">
+        <div className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
 
             {/* Step 4 book metadata */}
-            <div className="mb-7">
+            <div className="mb-2">
                 <h2 className="text-[clamp(24px,4vw,32px)] text-[#4e9eb8] font-bold mb-4 border-l-4 border-[#ffca38] pl-4">
                     Step 4: Book Metadata
                 </h2>
@@ -62,7 +62,7 @@ const Step4 = () => {
             </div>
 
             {/* Introduction Section with Image */}
-            <div className="relative w-full h-[250px] bg-white rounded-lg flex items-center justify-center">
+            <div className="relative w-full h-37.5 sm:h-62.5 bg-white rounded-lg flex items-center justify-center">
                 <Image src="/8StepsImages/image3.webp" alt="Image" fill className="object-contain" />
             </div>
             <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-3">
@@ -71,11 +71,11 @@ const Step4 = () => {
 
             {/* Book Title Section */}
             <div className="mb-8">
-                <h3 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold text-[#3c3c3c] mb-4">
+                <h2 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold text-[#3c3c3c] mb-4">
                     Book Title
-                </h3>
+                </h2>
                 <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-3">
-                    Writers often ask for tips on <Link href="#" className="text-[#4e9eb8] underline hover:text-[#4e9eb8]/70">how to come up with a book title</Link>.
+                    Writers often ask for tips on <Link href="#" className="text-[#4e9eb8] font-bold underline hover:text-[#4e9eb8]/70">how to come up with a book title</Link>.
                 </p>
                 <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
                     A good rule of thumb is to follow the PINC Acronym, coined by Michael Hyatt.
@@ -96,18 +96,18 @@ const Step4 = () => {
             <div className="bg-[#f4f6f8] w-full h-auto rounded-[5px] border mb-6 border-gray-200">
 
                 <div className="bg-[#4e9eb8] text-white px-6 py-4 flex justify-center items-center">
-                    <h3 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold">
+                    <h2 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold">
                         You Want Your Title To Be
-                    </h3>
+                    </h2>
                 </div>
 
                 <div className="space-y-1.5 p-6">
                     {titleCharacteristics.map((char, idx) => (
                         <div key={idx}>
-                            <h4 className="text-[clamp(0.875rem,2.5vw,1rem)] font-bold text-[#4e9eb8] mb-1">
+                            <h4 className="text-[clamp(0.875rem,2.5vw,1.1rem)] font-bold text-[#4e9eb8] mb-1">
                                 {char.title}
                             </h4>
-                            <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed">
+                            <p className="text-[clamp(0.875rem,2vw,0.89rem)] font-[sans-serif] text-gray-700 leading-relaxed">
                                 {char.description}
                             </p>
                         </div>
@@ -132,9 +132,9 @@ const Step4 = () => {
             <div className="mb-8">
                 <div className='flex justify-between items-start '>
                     <div>
-                        <h3 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold text-[#3c3c3c] mb-4">
+                        <h2 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold text-[#3c3c3c] mb-4">
                             Book Description
-                        </h3>
+                        </h2>
                         <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
                             The cover of your book draws a person in…the title intrigues…and the book description closes the deal.
                         </p>
@@ -143,7 +143,7 @@ const Step4 = () => {
                         </p>
 
                         {/* Description Tips */}
-                        <ul className="space-y-2 mb-6 text-[clamp(0.875rem,2vw,1rem)] text-gray-700">
+                        <ul className="sm:space-y-2 mb-6 text-[clamp(0.875rem,2vw,1rem)] text-gray-700">
                             {descriptionTips.map((tip, idx) => (
                                 <li key={idx} className="flex gap-2">
                                     <span className="font-bold text-[#4e9eb8]">•</span>
@@ -168,43 +168,30 @@ const Step4 = () => {
 
             {/* ISBNs Section */}
             <div className="mb-8">
-                <h3 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold text-[#3c3c3c] mb-4">
+                <h2 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold text-[#3c3c3c] mb-4">
                     ISBNs
-                </h3>
+                </h2>
                 <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
-                    You&apos;re probably wondering <Link href="#" className="text-[#4e9eb8] underline hover:text-[#4e9eb8]/70">what is an ISBN</Link>?
+                    You&apos;re probably wondering <Link href="#" className="text-[#4e9eb8] font-bold underline hover:text-[#4e9eb8]/70">what is an ISBN</Link>?
                 </p>
 
                 {/* YouTube Video Space */}
-                <div className="relative w-full h-[300px] mb-6 bg-black rounded-lg overflow-hidden">
-                    {/* 
-              To render a YouTube video thumbnail, use:
-              https://img.youtube.com/vi/[VIDEO_ID]/maxresdefault.jpg
-              
-              Replace [VIDEO_ID] with the actual YouTube video ID from the URL.
-              For example, if URL is: https://www.youtube.com/watch?v=abc123def456
-              The VIDEO_ID is: abc123def456
-              
-              Full URL would be: https://img.youtube.com/vi/abc123def456/maxresdefault.jpg
-              
-              Then use Image component:
-              <Image 
-                src="https://img.youtube.com/vi/[VIDEO_ID]/maxresdefault.jpg" 
-                alt="Video thumbnail" 
-                fill 
-                className="object-cover" 
-              />
-              
-              To make it clickable, wrap in a link to: https://www.youtube.com/embed/[VIDEO_ID]
-            */}
-                    <p className="text-white text-center py-[135px]">YouTube Video Space</p>
+                <div className="relative w-full h-[330px] md:h-[400px] mb-6 overflow-hidden lg:px-6">
+                    <iframe
+                        src="https://www.youtube.com/embed/9i0Q1WmsHFQ"
+                        title="Ask Bradley! Free ISBNs and FAQs"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                    ></iframe>
                 </div>
 
                 <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
                     ISBN stands for International Standard Book Number. It&apos;s an internationally recognized identification number, similar to any product number you would find on other products you buy, like a box of cereal or a jar of peanuts.
                 </p>
 
-                <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
+                <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed ">
                     <span className="font-bold">Do you need an ISBN?</span>
                 </p>
 
@@ -215,14 +202,14 @@ const Step4 = () => {
                         </li>
                     ))}
                 </ul>
-                <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
+                <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed">
                     <span className="font-bold">How many ISBNs do you need?</span>
                 </p>
                 <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
                     You&apos;ll need an ISBN for each format of your book. Let&apos;s say you want to publish hardcover, paperback, and ebook versions of your upcoming book—that means you&apos;ll need to purchase three unique ISBNs.
                 </p>
 
-                <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
+                <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed ">
                     <span className="font-bold">What&apos;s the difference between an ISBN and a barcode?</span>
                 </p>
                 <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-6">
@@ -230,51 +217,45 @@ const Step4 = () => {
                 </p>
 
                 {/* ISBN Icons Space */}
-                <div className="relative w-full h-[120px] mb-8 bg-white rounded-lg border border-gray-200 flex items-center justify-center gap-4">
-                    {/* Space for 5 ISBN icons - will be displayed horizontally */}
-                    <p className="text-gray-400">ISBN Icons Space (5 icons)</p>
+                <div className="relative w-full h-[120px] my-8 flex items-center justify-center gap-4">
+                    <Image src="/isbnIcons.webp" alt="Image" fill className="object-contain" />
                 </div>
             </div>
 
             {/* BISAC Codes Section */}
             <div className="mb-8">
-                <h3 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold text-[#3c3c3c] mb-4">
+                <h2 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold text-[#3c3c3c] mb-4">
                     BISAC Codes
-                </h3>
+                </h2>
                 <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
                     BISAC codes essentially identify what your book is about – the primary genre(s), topic(s), and theme(s). While a reader might not be trained to search for books based on a BISAC code, retailers and booksellers will use your BISAC code to determine in which category to place your book on their website, or where to shelve it in their bookstore.
                 </p>
                 <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-4">
-                    For a full list of available BISAC codes, see BISAC&apos;s <Link href="#" className="text-[#4e9eb8] underline hover:text-[#4e9eb8]/70">Complete BISAC Subject Headings List</Link>.
+                    For a full list of available BISAC codes, see BISAC&apos;s <Link href="#" className="text-[#4e9eb8] font-bold underline hover:text-[#4e9eb8]/70">Complete BISAC Subject Headings List</Link>.
                 </p>
 
-                {/* How to Choose BISAC Codes Section */}
-                <div className="bg-[#4e9eb8] text-white px-6 py-4 rounded-[5px] mb-6">
-                    <h3 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold">
-                        How to Choose BISAC Codes
-                    </h3>
-                </div>
+                <div className="bg-[#f4f6f8] w-full h-auto rounded-[5px] border mb-6 border-gray-200">
+                    {/* How to Choose BISAC Codes Section */}
+                    <div className="bg-[#4e9eb8] text-white px-6 py-4">
+                        <h2 className="text-[clamp(1rem,2.5vw,1.25rem)] font-bold">
+                            How to Choose BISAC Codes
+                        </h2>
+                    </div>
 
-                <div className="space-y-6 mb-8">
-                    {bisacTips.map((tip, idx) => (
-                        <div key={idx}>
-                            <h4 className="text-[clamp(0.875rem,2.5vw,1rem)] font-bold text-[#4e9eb8] mb-2">
-                                {tip.title}
-                            </h4>
-                            <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed">
-                                {tip.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-
-                {/* BISAC Icons Space */}
-                <div className="relative w-full h-[120px] bg-white rounded-lg border border-gray-200 flex items-center justify-center gap-4">
-                    {/* Space for 5 BISAC icons - will be displayed horizontally */}
-                    <p className="text-gray-400">BISAC Icons Space (5 icons)</p>
+                    <div className="space-y-3 p-6">
+                        {bisacTips.map((tip, idx) => (
+                            <div key={idx}>
+                                <h4 className="text-[clamp(0.875rem,2.5vw,1.1rem)] font-bold text-[#4e9eb8]">
+                                    {tip.title}
+                                </h4>
+                                <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed">
+                                    {tip.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-
         </div>
     )
 }

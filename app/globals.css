@@ -34,6 +34,9 @@ body {
 
 a,
 button,
+p,
+ul,
+li,
 h1,
 h2,
 input {
@@ -78,16 +81,15 @@ input {
 
 @media (min-width: 1025px) {
 
-  .first-bg
-  {
-  background-size: contain;
-  background-repeat: repeat;
-  background-position: 0% 14%;
-}
+  .first-bg {
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: 0% 14%;
+  }
 
-.second-bg {
-  background-position: 0 14%;
-}
+  .second-bg {
+    background-position: 0 14%;
+  }
 
 }
 
