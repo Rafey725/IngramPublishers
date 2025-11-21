@@ -1,7 +1,7 @@
 export default function Step8() {
 
     return (
-        <div className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
+        <div id='step-eight' className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
             {/* Heading */}
             <h2 className="text-[clamp(24px,4vw,32px)] text-[#4e9eb8] font-bold mb-4 border-l-4 border-[#ffca38] pl-4">
                 Step 8: Join the Indie Publishing Community

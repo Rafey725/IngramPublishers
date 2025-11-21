@@ -101,10 +101,21 @@ input {
 }
 
 .activeSectionLink {
+  height: auto;
   font-weight: bold;
   color: #3a7c92;
   padding-left: 10px;
   border-left: #ffc20d 5px solid;
-  margin-left: 5px;
+  margin-left: 15px;
   padding-left: 4px;
+}
+
+.blueBullets {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.blueBullets li::marker {
+  color: #4e9eb8;
+  /* <-- this uses the CSS variable */
 }

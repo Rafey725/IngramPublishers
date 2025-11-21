@@ -36,7 +36,7 @@ const marketingSteps = [
 
 export default function Step7() {
     return (
-        <div className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
+        <div id='step-seven' className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
 
             {/* Header */}
             <h2 className="text-[clamp(24px,4vw,32px)] text-[#4e9eb8] font-bold mb-4 border-l-4 border-[#ffca38] pl-4">

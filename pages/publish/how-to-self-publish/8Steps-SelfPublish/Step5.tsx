@@ -18,7 +18,7 @@ const Step5 = () => {
     ]
 
     return (
-        <div className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
+        <div id='step-five' className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
 
             {/* Step 5 Header */}
             <div className="mb-7">

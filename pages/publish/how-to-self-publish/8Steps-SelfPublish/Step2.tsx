@@ -23,7 +23,7 @@ const Step2 = () => {
     ];
 
     return (
-        <div className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
+        <div id='step-two' className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
             { /* Step 2: Book Editing */}
             <div className="mb-7">
                 <h2 className="text-[clamp(24px,4vw,32px)] text-[#4e9eb8] font-bold mb-4 border-l-4 border-[#ffca38] pl-4">

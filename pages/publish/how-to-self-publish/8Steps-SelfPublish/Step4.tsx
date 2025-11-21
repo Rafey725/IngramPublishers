@@ -49,7 +49,7 @@ const Step4 = () => {
 
 
     return (
-        <div className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
+        <div id='step-four' className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
 
             {/* Step 4 book metadata */}
             <div className="mb-2">

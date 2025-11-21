@@ -18,7 +18,7 @@ const Step3 = () => {
         }
     ]
     return (
-        <div className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
+        <div id='step-three' className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
             {/* Step 3: Book Design */}
             <div className="mb-7">
                 <h2 className="text-[clamp(24px,4vw,32px)] text-[#4e9eb8] font-bold mb-4 border-l-4 border-[#ffca38] pl-4">
@@ -41,7 +41,7 @@ const Step3 = () => {
             </div>
             {/* book cover design */}
             <div>
-                <h2 className="text-[clamp(18px,4vw,20px)] font-bold text-[#3c3c3c] mb-4">
+                <h2 className="text-[clamp(18px,4vw,20px)] font-bold text-[#3c3c3c] my-4">
                     Book Cover Design
                 </h2>
                 <ul className='flex flex-col gap-4'>

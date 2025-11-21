@@ -1,21 +1,42 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ProsList from './ProsList';
 import StickyBar from './StickyBar';
 import BgBanner from './BgBanner';
 import SelfPublishingSteps from './8Steps-SelfPublish/SelfPublishingSteps';
+import SelfPublishingCosts from './6Steps-Costs/SelfPublishingCosts';
+import Image from 'next/image';
+import PricingYourBook from './PricingYourBook';
 
 const HowToSelfPublish = () => {
   let sectionIds: string[] = [
     'self-publish-introduction',
     'benefits-to-publish',
     'eight-steps-to-publish',
+    'step-one',
+    'step-two',
+    'step-three',
+    'step-four',
+    'step-five',
+    'step-six',
+    'step-seven',
+    'step-eight',
     'costs-to-publish',
+    'costs-step-one',
+    'costs-step-two',
+    'costs-step-three',
+    'costs-step-four',
+    'costs-step-five',
+    'costs-step-six',
     'pricing-your-book',
     'author-salary',
-    'final-tips-to-publish',]
+    'final-tips-to-publish']
+
   const [activeSection, setActiveSection] = useState('')
+  console.log(activeSection);
+
+
 
   const prosList: { heading: string, description: string }[] = [
     {
@@ -45,10 +66,12 @@ const HowToSelfPublish = () => {
   ];
 
   function handleScrollToClick(element: string) {
-    let scrollToEl = document.querySelector(`#${element}`)
+    let scrollToEl = document.getElementById(element)
+    console.log(scrollToEl);
+
     scrollToEl?.scrollIntoView({ behavior: 'smooth' })
   }
-  
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -69,13 +92,24 @@ const HowToSelfPublish = () => {
     return () => observer.disconnect()
   }, [])
 
-  useEffect(()=>{
-    let activeSectionEl = document.getElementById(activeSection+'-link')
+  useEffect(() => {
+    let activeSectionEl = document.getElementById(activeSection + '-link')
+
     if (activeSectionEl) {
-      activeSectionEl.classList.add('activeSectionLink');
+      // remove previous selected links
+      let links = Array.from(document.getElementById('publishLinks')?.children || [])
+      let subPublishLinks = Array.from(document.getElementById('subPublishLinks')?.children || [])
+      let subCostsLinks = Array.from(document.getElementById('subCostsLinks')?.children || [])
+
+      let allLinks = [...links, ...subPublishLinks, ...subCostsLinks]
+
+      allLinks.forEach(link => {
+        link.classList.remove('activeSectionLink')
+      })
+      // select the active link
+      activeSectionEl.classList.add('activeSectionLink')
     }
-    console.log(activeSectionEl);
-  })
+  }, [activeSection])
 
   return (
     <div>
@@ -94,7 +128,7 @@ const HowToSelfPublish = () => {
         {/* main section */}
         <div className='max-w-[1100px] mx-auto flex justify-between px-5 md:px-10 py-16'>
           {/* aspects of self publishing */}
-          <div className="w-[705px] py-6">
+          <div className="max-w-195 md:w-[clamp(20rem,50vw,48.75rem)] py-6">
             {/* Heading */}
             <h2 className="text-[clamp(20px,2.5vw,30px)] leading-[clamp(25px,3.5vw,40px)] font-bold mb-2">
               Here, we’ll address the various aspects of self-publishing a book.
@@ -125,7 +159,7 @@ const HowToSelfPublish = () => {
           </div>
 
           {/* sticky section... */}
-          <StickyBar handleScrollToClick={handleScrollToClick} />
+          <StickyBar handleScrollToClick={handleScrollToClick} activeSection={activeSection} />
         </div>
 
         {/* benefits banner*/}
@@ -162,6 +196,19 @@ const HowToSelfPublish = () => {
 
         {/* costs to self publish */}
         <BgBanner id='costs-to-publish' bgImage='/self-publish-page-bg4.jpg' heading1='How Much Does It Cost to Self-Publish a Book?' />
+
+        {/* 6 steps of costs to self publish */}
+        <SelfPublishingCosts />
+
+        {/* pricing your book banner*/}
+        <BgBanner id='pricing-your-book' bgImage='/self-publish-page-bg5.jpg' heading1='Pricing Your Book' />
+        {/* pricing your book component */}
+        <PricingYourBook />
+
+        {/* footer image */}
+        <div className='relative max-w-[78.125rem] w-full mx-auto h-100'>
+          <Image src='/self-publish-page-final-tips-image.jpg' alt='image' fill className='object-contain' />
+        </div>
       </main>
     </div>
 
