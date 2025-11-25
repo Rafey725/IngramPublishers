@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client"
 
 import PublishHeroBanner from '@/components/PublishHeroBanner'
@@ -9,6 +10,7 @@ import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import type { RootState } from '@/app/store'
 import PrintingOptions from './PrintingOptions'
+import BookFormats from './BookFormats'
 
 const HowToSelfDesignBookComp = () => {
     const listItems = [
@@ -143,16 +145,28 @@ const HowToSelfDesignBookComp = () => {
             <BgBanner
                 id='printing-options'
                 image='/how-to-design-book/banner-image1.webp'
-                heading='Book Printing Options with IngramSpark'
+                heading='Book Printing Options with IngramPublishers'
                 description={
                     <>
                         Changes in technology have allowed for self-publishers to have more book printing options today than ever before. Let’s look at the{" "}
                         <Link href="/" className='text-[#3a7c92] inline cursor-pointer underline font-bold hover:text-[#4e9eb8]'>book printing and binding</Link>
-                        {" "}options available for IngramSpark authors!
+                        {" "}options available for IngramPublishers authors!
                     </>}
             />
             {/* Printing options for publishers content */}
             <PrintingOptions />
+
+            {/* book formats */}
+            <BgBanner
+                id='formats'
+                image='/how-to-design-book/banner-image2.webp'
+                heading='Book Formats: Ebook, Paperback, and Hardcover'
+                description={
+                    <>
+                        We highly recommend that you publish in all formats—ebook, paperback, and hardcover. In this section, we’ll talk about print books vs. ebooks, the difference between paperback and hardcover, and the pros of publishing hardcover books.
+                    </>} />
+            {/* book formats content */}
+            <BookFormats />
         </>
     )
 }

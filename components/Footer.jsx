@@ -8,7 +8,7 @@ const Footer = () => {
         {/* form */}
         <div className='sm:max-w-[305px] w-full h-auto px-2'>
           <form className='w-full h-full flex flex-col gap-2'>
-            <h1 className='text-[19px]'>JOIN OUR MAILING LIST</h1>
+            <h1 className='text-[19px]'>Submit Your MenuScript</h1>
             {/* name */}
             <div className='text-[#555] text-[18px] flex gap-3 border-t border-white/80 pt-4 pb-2'>
               <input type="text" placeholder='First Name' name='first-name' className='bg-white outline-none w-[50%] h-10 px-2 rounded-[5px]' />
@@ -22,7 +22,7 @@ const Footer = () => {
             <div className='flex flex-col gap-3'>
               <label className='flex gap-1 items-start'>
                 <input type="checkbox" name="agreement" id="agreement" className='my-1' />
-                <p className='text-[13.5px]'>I agree to receive marketing messages from IngramSpark and consent to the IngramSpark's privacy policy and {""}
+                <p className='text-[13.5px]'>I agree to receive marketing messages from IngramPublishers and consent to the IngramPublishers's privacy policy and {""}
                   <a href="#" className=' underline decoration-1 underline-offset-1.5'>terms of use.</a>*</p>
               </label>
               <p className='text-[11px] text-[#c5c5c5]'>This site is protected by reCAPTCHA and the Google {""}
@@ -30,7 +30,7 @@ const Footer = () => {
                 <a href="#" className='text-white/80 underline decoration-1 underline-offset-1.5'>Terms of Service</a> apply.</p>
             </div>
             <button className='mt-2 w-full h-[50px] bg-[#f2c02b] hover:bg-[#eab002] text-black rounded-[7px] text-[20px] cursor-pointer transition duration-300'>Submit</button>
-            <p className='text-[11px] text-[#c5c5c5]'>By clicking the "submit" button, you are agreeing to receive future marketing e-mail messages from IngramSpark.</p>
+            <p className='text-[11px] text-[#c5c5c5]'>By clicking the "submit" button, you are agreeing to receive future marketing e-mail messages from IngramPublishers.</p>
           </form>
         </div>
         {/* quick links */}
@@ -39,12 +39,6 @@ const Footer = () => {
           <div className='w-full grid grid-cols-3 pt-5 border-t border-white/80'>
             <div className=''>
               <ul className='flex flex-col gap-1 items-start justify-center text-[13.5px]'>
-                <li>
-                  <a href="#" className='hover:underline cursor-pointer underline-offset-1.5 transition duration-100'>Log In</a>
-                </li>
-                <li>
-                  <a href="#" className='hover:underline cursor-pointer underline-offset-1.5 transition duration-100'>Create Account</a>
-                </li>
                 <li>
                   <a href="#" className='hover:underline cursor-pointer underline-offset-1.5 transition duration-100'>Privacy Notice</a>
                 </li>

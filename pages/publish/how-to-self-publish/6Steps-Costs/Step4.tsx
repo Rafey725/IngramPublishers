@@ -26,21 +26,21 @@ const Step4 = () => {
           is the official ISBN agency for the US;{" "}
           <Link href="#"
             className='underline text-[#4e9eb8] hover:opacity-70'>{" "}Nielsen</Link>
-          is the official ISBN agency for the UK and Ireland; Thorpe-Bowker is the official ISBN agency for Australia. IngramSpark does business in many other countries, so we encourage each customer to ensure they are acquiring their ISBN from their country’s approved ISBN Agency. You can find the approved ISBN agency for your country on the{" "}
+          is the official ISBN agency for the UK and Ireland; Thorpe-Bowker is the official ISBN agency for Australia. IngramPublishers does business in many other countries, so we encourage each customer to ensure they are acquiring their ISBN from their country’s approved ISBN Agency. You can find the approved ISBN agency for your country on the{" "}
           <Link href="#"
             className='underline text-[#4e9eb8] hover:opacity-70'>{" "}International ISBN Agency's Website</Link>.
         </li>
 
         <li>For U.S. customers, ISBNs can be purchased from Bowker directly through your <Link href="#"
-          className='underline text-[#4e9eb8] hover:opacity-70'>{" "}IngramSpark account</Link> for $85 each. You can also buy a block of ten ISBNs from{" "}
+          className='underline text-[#4e9eb8] hover:opacity-70'>{" "}IngramPublishers account</Link> for $85 each. You can also buy a block of ten ISBNs from{" "}
           <Link href="#"
             className='underline text-[#4e9eb8] hover:opacity-70'>{" "}Bowker</Link>
-          for $295. At IngramSpark, we believe it's in your best interest to be recognized as the owner of your work and a publisher in your own right, which is why we encourage publishers to{" "}
+          for $295. At IngramPublishers, we believe it's in your best interest to be recognized as the owner of your work and a publisher in your own right, which is why we encourage publishers to{" "}
           <Link href="#"
             className='underline text-[#4e9eb8] hover:opacity-70'>{" "}purchase their own ISBNs</Link>.
         </li>
 
-        <li>If you want your book to be available in brick-and-mortar bookstores, you’ll need a barcode in addition to your ISBN. Some ISBN services sell barcodes, as well as ISBNs, but you can use IngramSpark’s book cover template generator to get a free barcode.
+        <li>If you want your book to be available in brick-and-mortar bookstores, you’ll need a barcode in addition to your ISBN. Some ISBN services sell barcodes, as well as ISBNs, but you can use IngramPublishers’s book cover template generator to get a free barcode.
         </li>
       </ul >
     </div>

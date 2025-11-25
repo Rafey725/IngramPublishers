@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "win11": "next dev --webpack --hostname 192.168.2.146",
+    "win11": "next dev --webpack --hostname 192.168.2.147",
     "win10": "next dev --webpack --hostname 192.168.100.12",
     "build": "next build --webpack",
     "start": "next start",

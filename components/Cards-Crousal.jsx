@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image'
 /* eslint-disable @next/next/no-img-element */
 import React, { useRef, useState, useEffect } from 'react'
 
@@ -39,12 +40,13 @@ const CardsCrousal = () => {
       h: 400
     },
   ]
-  const [currentSlide, setCurrentSlide] = useState(1)
+  let intervalRef = useRef(null)
+  const [currentSlide, setCurrentSlide] = useState(5)
   let sliderRef = useRef(null)
   console.log(currentSlide);
 
   function handlePrevious() {
-    console.log('previous');
+    clearInterval(intervalRef.current) // stopping auto sliding 
     if (currentSlide === 1) {
       setCurrentSlide(currentSlide - 1)
       setTimeout(() => {
@@ -57,12 +59,14 @@ const CardsCrousal = () => {
     } else {
       setCurrentSlide(currentSlide - 1)
     }
+    startInterval() // starting the auto sliding
   }
   function handleNext() {
-    console.log('next');
+    clearInterval(intervalRef.current) // stopping auto sliding
     if (currentSlide === slides.length) {
       setCurrentSlide(currentSlide + 1)
       setTimeout(() => {
+        if (!sliderRef.current) return
         sliderRef.current.style.transition = `transform 0s`
         setCurrentSlide(1)
         setTimeout(() => {
@@ -72,14 +76,19 @@ const CardsCrousal = () => {
     } else {
       setCurrentSlide(currentSlide + 1)
     }
+    startInterval() // starting the auto sliding
+  }
+
+  // interval function
+  function startInterval() {
+    intervalRef.current = setInterval(() => {
+      handleNext(); // just call handleNext(), don’t wrap in setCurrentSlide
+    }, 3000);
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext(); // just call handleNext(), don’t wrap in setCurrentSlide
-    }, 3000); // change slide every 3 seconds
-
-    return () => clearInterval(interval); 
+    startInterval()
+    return () => clearInterval(intervalRef.current);
   }, [currentSlide])
 
   return (
@@ -100,17 +109,17 @@ const CardsCrousal = () => {
           className={`w-full h-full flex justify-between items-center transition-all duration-500 ease-in-out`}>
           {/* clone slide */}
           <div className='shrink-0 my-5 w-full h-full flex flex-col-reverse md:flex-row md:justify-between items-center'>
-            <div>
-              <div className={`sm:w-[590px] md:w-[610px] px-5`}>
-                <h1 className={`text-[clamp(20px,5vw,32px)] text-center text-wrap mx-3 sm:leading-10 md:leading-15 font-extrabold text-[#4e9eb8]`}>{slides[slides.length - 1].heading}</h1>
+            <div className='w-full h-full flex flex-col items-center md:items-start'>
+              <div className={`sm:max-w-[540px] md:max-w-[810px] w-[680px]`}>
+                <h1 className={`text-[clamp(20px,5vw,52px)] text-center sm:text-start text-wrap sm:leading-10 md:leading-15 font-extrabold text-[#4e9eb8]' : 'text-[clamp(30px,5vw,108px)]'} font-extrabold text-[#4e9eb8]`}>{slides[slides.length - 1].heading}</h1>
               </div>
-              <div className='w-[270px] sm:max-w-[540px] w-full text-center '>
-                <p className='sm:text-[22px] text-center font-normal text-wrap'>{slides[slides.length - 1].description}</p>
+              <div className={`w-[270px] sm:max-w-[640px] sm:w-[550px] mt-5`}>
+                <p className='sm:text-[22px] text-center sm:text-start font-normal text-wrap'>{slides[slides.length - 1].description}</p>
               </div>
-              <button className='w-[190px] sm:w-[220px] h-[48px] bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
+              <button className='w-[190px] sm:w-[220px] h-12 bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
             </div>
-            <div>
-              <img src={slides[slides.length - 1].image} alt="image" className={`shrink-0 w-[${slides[slides.length - 1].w}] h-[${slides[slides.length - 1].h}] max-h-[380px] `} />
+            <div className={`relative shrink-0 max-w-[450px] h-[370px] w-full max-h-[380px] -ml-10`}>
+              <Image src={slides[slides.length - 1].image} alt="image" fill className='object-contain' />
             </div>
           </div>
 
@@ -119,16 +128,16 @@ const CardsCrousal = () => {
               <div key={index}
                 className='shrink-0 my-5 w-full h-full flex flex-col-reverse md:flex-row md:justify-between items-center'>
                 <div className='w-full h-full flex flex-col items-center md:items-start'>
-                  <div className={`${index === 4 ? 'sm:max-w-[540px] md:w-[610px] ' : null}`}>
+                  <div className={`${index === 4 ? 'sm:max-w-[540px] md:max-w-[810px] w-[680px] ' : null}`}>
                     <h1 className={`${index === 4 ? 'text-[clamp(20px,5vw,52px)] text-center sm:text-start text-wrap sm:leading-10 md:leading-15 font-extrabold text-[#4e9eb8]' : 'text-[clamp(30px,5vw,108px)]'} font-extrabold text-[#4e9eb8]`}>{slide.heading}</h1>
                   </div>
-                  <div className={`${index === 4 ? 'w-[270px] sm:max-w-[640px]' : ''}`}>
+                  <div className={`${index === 4 ? 'w-[270px] sm:max-w-[640px] sm:w-[550px] mt-5' : ''}`}>
                     <p className='sm:text-[22px] text-center sm:text-start font-normal text-wrap'>{slide.description}</p>
                   </div>
                   <button className='w-[190px] sm:w-[220px] h-12 bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
                 </div>
-                <div>
-                  <img src={slide.image} alt="image" className={`shrink-0 max-w-[${slides[0].w}] h-[${slides[0].h}] w-[380px] md:w-full max-h-[380px]`} />
+                <div className={`relative shrink-0 max-w-[450px] h-[370px] w-full max-h-[380px] -ml-10`}>
+                  <Image src={slide.image} alt="image" fill className='object-contain' />
                 </div>
               </div>
             )
@@ -136,17 +145,17 @@ const CardsCrousal = () => {
           }
           {/* clone slide */}
           <div className='shrink-0 my-5 w-full h-full flex flex-col-reverse md:flex-row md:justify-between items-center'>
-            <div>
-              <div className={``}>
-                <h1 className={`text-[clamp(30px,5vw,108px)] text-center sm:text-start font-extrabold text-[#4e9eb8]`}>{slides[0].heading}</h1>
+            <div className='w-full h-full flex flex-col items-center md:items-start'>
+              <div>
+                <h1 className={`text-[clamp(30px,5vw,108px)] font-extrabold text-[#4e9eb8]`}>{slides[0].heading}</h1>
               </div>
-              <div className='max-w-[640px] w-full'>
+              <div className={`w-[270px] sm:max-w-[640px] sm:w-[550px] mt-5}`}>
                 <p className='sm:text-[22px] text-center sm:text-start font-normal text-wrap'>{slides[0].description}</p>
               </div>
-              <button className='w-[190px] sm:w-[220px] h-[48px] bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
+              <button className='w-[190px] sm:w-[220px] h-12 bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
             </div>
-            <div>
-              <img src={slides[0].image} alt="image" className={`shrink-0 max-w-[${slides[0].w}] h-[${slides[0].h}] w-[380px] md:w-full max-h-[380px]`} />
+            <div className={`relative shrink-0 max-w-[450px] h-[370px] w-full max-h-[380px] -ml-10`}>
+              <Image src={slides[0].image} alt="image" fill className='object-contain' />
             </div>
           </div>
 

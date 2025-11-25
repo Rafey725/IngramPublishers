@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 
 const Step5 = () => {
-    // IngramSpark benefits array
-    const ingramSparkBenefits = [
+    // IngramPublishers benefits array
+    const IngramPublishersBenefits = [
         "24/7 customer support",
         "Online sales reporting",
         "Free publishing tools and resources",
@@ -12,9 +12,9 @@ const Step5 = () => {
     ];
 
     let introuductionParas: string[] = [
-        'There are various self-publishing companies to choose from—but IngramSpark provides many features that you won&apos;t find anywhere else.',
-        ' IngramSpark offers indie authors and publishers the ability to create professional print books (paperback and hardcover) and ebooks. With IngramSpark, you can self-publish a book and make it available to 45,000+ retailers and libraries—in stores and online—through our global distribution network.',
-        'In addition, IngramSpark authors receive:'
+        'There are various self-publishing companies to choose from—but IngramPublishers provides many features that you won&apos;t find anywhere else.',
+        ' IngramPublishers offers indie authors and publishers the ability to create professional print books (paperback and hardcover) and ebooks. With IngramPublishers, you can self-publish a book and make it available to 45,000+ retailers and libraries—in stores and online—through our global distribution network.',
+        'In addition, IngramPublishers authors receive:'
     ]
 
     return (
@@ -44,7 +44,7 @@ const Step5 = () => {
 
             {/* Benefits List */}
             <ul className="space-y-0 mb-4 text-[clamp(0.875rem,2vw,1rem)] text-gray-700">
-                {ingramSparkBenefits.map((benefit, idx) => (
+                {IngramPublishersBenefits.map((benefit, idx) => (
                     <li key={idx} className="flex gap-3 items-start">
                         <span className="text-[#4e9eb8] font-bold text-lg mt-0.5">✓</span>
                         <span>{benefit}</span>
@@ -54,7 +54,7 @@ const Step5 = () => {
 
             {/* Closing Paragraph */}
             <p className="text-[clamp(0.875rem,2vw,1rem)] text-gray-700 leading-relaxed mb-8">
-                Some self-publishers simply wish to print a select number of copies, and not enable their title for distribution—and you can do that! However, if you&apos;re looking to reach the masses, IngramSpark&apos;s distribution network has you covered.
+                Some self-publishers simply wish to print a select number of copies, and not enable their title for distribution—and you can do that! However, if you&apos;re looking to reach the masses, IngramPublishers&apos;s distribution network has you covered.
             </p>
 
             {/* Responsive Image Section */}

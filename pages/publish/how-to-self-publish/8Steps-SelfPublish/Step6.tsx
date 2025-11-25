@@ -33,8 +33,8 @@ export default function Step6() {
                         </div>
                     </div>
 
-                    <p className="text-gray-600 text-[16px] leading-7">Now, indie publishers can receive the same book distribution channels available to major traditional publishers.IngramSpark makes titles available to 45,000 + retailers, libraries, schools, and e - commerce companies including Amazon, Barnes & Noble, Indigo, Foyles, Waterstones, and more across the globe.</p>
-                    <p className="text-gray-600 text-[16px] leading-7 mt-3">For more than 50 years, Ingram has developed relationships and connections within the book industry to allow your book to be available to the masses.We have print facilities in the United States, United Kingdom, and Australia, and we have print channels in China, Germany, India, Italy, Poland, Russia, South Korea, Spain, and Brazil. By self - publishing with IngramSpark, you’re giving your book the best chance of reaching a global audience.</p>
+                    <p className="text-gray-600 text-[16px] leading-7">Now, indie publishers can receive the same book distribution channels available to major traditional publishers.IngramPublishers makes titles available to 45,000 + retailers, libraries, schools, and e - commerce companies including Amazon, Barnes & Noble, Indigo, Foyles, Waterstones, and more across the globe.</p>
+                    <p className="text-gray-600 text-[16px] leading-7 mt-3">For more than 50 years, Ingram has developed relationships and connections within the book industry to allow your book to be available to the masses.We have print facilities in the United States, United Kingdom, and Australia, and we have print channels in China, Germany, India, Italy, Poland, Russia, South Korea, Spain, and Brazil. By self - publishing with IngramPublishers, you’re giving your book the best chance of reaching a global audience.</p>
                 </div>
             </div >
         </div>

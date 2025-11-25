@@ -43,8 +43,8 @@ const Step4 = () => {
 
     const isbnList = [
         " You need an ISBN if you want your book to be available for sale in bookstores or with an online retailer or wholesaler. You&apos;ll want to purchase this before your book designer begins work on the cover of your book, so it can be included in the back barcode.",
-        " If you don&apos;t want your book available for sale, IngramSpark can assign a SKU to your book for printing and manufacturing purposes only. If the book is not available for sale with an ISBN, then you will be the only person capable of ordering a copy of your book. You might select this option if you&apos;re printing a book for personal use or as a gift for a friend.",
-        "Many self-publishing platforms offer indie authors the opportunity to use a free ISBN. At IngramSpark, we highly recommend that you purchase your own ISBN."
+        " If you don&apos;t want your book available for sale, IngramPublishers can assign a SKU to your book for printing and manufacturing purposes only. If the book is not available for sale with an ISBN, then you will be the only person capable of ordering a copy of your book. You might select this option if you&apos;re printing a book for personal use or as a gift for a friend.",
+        "Many self-publishing platforms offer indie authors the opportunity to use a free ISBN. At IngramPublishers, we highly recommend that you purchase your own ISBN."
     ];
 
 

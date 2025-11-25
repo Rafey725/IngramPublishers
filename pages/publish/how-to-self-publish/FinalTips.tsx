@@ -14,7 +14,7 @@ const FinalTips = () => {
         },
         {
             title: "3. Go Wide With Your Book Distribution",
-            description: "It’s important to partner with a global distributor, like IngramSpark, that can help you reach bookstores, retailers, and libraries all over the world. Don’t limit yourself with an exclusive deal. You want to be available in all channels where your potential readers are."
+            description: "It’s important to partner with a global distributor, like IngramPublishers, that can help you reach bookstores, retailers, and libraries all over the world. Don’t limit yourself with an exclusive deal. You want to be available in all channels where your potential readers are."
         },
         {
             title: "4. Be Realistic",
