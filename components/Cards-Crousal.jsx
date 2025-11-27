@@ -1,3 +1,191 @@
+
+// "use client";
+// import Image from "next/image";
+// import React, { useRef, useState, useEffect } from "react";
+
+// const AICrousal = () => {
+//     const slides = [
+//         {
+//             heading: "Print",
+//             description: "Hardcover and paperback books created on demand.",
+//             image: "/slides/slide5.svg",
+//         },
+//         {
+//             heading: "Sell",
+//             description: "Reach millions of readers around the world.",
+//             image: "/slides/slide4.svg",
+//         },
+//         {
+//             heading: "Promote",
+//             description: "Book marketing services",
+//             image: "/slides/slide3.svg",
+//         },
+//         {
+//             heading: "Publish",
+//             description: "Create your print and ebook with professional quality.",
+//             image: "/slides/slide2.svg",
+//         },
+//         {
+//             heading: "You Have a Story. Share It with the World.",
+//             description:
+//                 "Everything you need to publish, print, promote and sell your book to millions of readers.",
+//             image: "/slides/slide1.webp",
+//         },
+//     ];
+
+//     const sliderRef = useRef(null);
+//     const intervalRef = useRef(null);
+
+//     const [current, setCurrent] = useState(1);
+//     const [slideWidth, setSlideWidth] = useState(0);
+
+//     // Make infinite loop structure
+//     const extendedSlides = [
+//         slides[slides.length - 1], // clone last
+//         ...slides,
+//         slides[0], // clone first
+//     ];
+
+//     /** -----------------------------------
+//      *  FUNCTIONS (declared before usage)
+//      * -----------------------------------**/
+
+//     const resetTransition = () => {
+//         if (sliderRef.current) {
+//             sliderRef.current.style.transition = "none";
+//         }
+//     };
+
+//     const enableTransition = () => {
+//         if (sliderRef.current) {
+//             sliderRef.current.style.transition = "transform 0.45s ease";
+//         }
+//     };
+
+//     const startAuto = () => {
+//         intervalRef.current = setInterval(() => {
+//             handleNext();
+//         }, 3000);
+//     };
+
+//     const handleNext = () => {
+//         clearInterval(intervalRef.current);
+//         enableTransition();
+//         setCurrent((prev) => prev + 1);
+//         startAuto();
+//     };
+
+//     const handlePrev = () => {
+//         clearInterval(intervalRef.current);
+//         enableTransition();
+//         setCurrent((prev) => prev - 1);
+//         startAuto();
+//     };
+
+//     /** -----------------------------------
+//      *  EFFECTS
+//      * -----------------------------------**/
+
+//     // Autoplay
+//     // useEffect(() => {
+//     //   startAuto();
+//     //   return () => clearInterval(intervalRef.current);
+//     // }, []);
+
+//     // Recalculate width on resize
+//     useEffect(() => {
+//         const updateWidth = () => {
+//             if (sliderRef.current && sliderRef.current.children[1]) {
+//                 setSlideWidth(sliderRef.current.children[1].offsetWidth);
+//             }
+//         };
+
+//         updateWidth();
+//         window.addEventListener("resize", updateWidth);
+
+//         return () => window.removeEventListener("resize", updateWidth);
+//     }, []);
+
+//     // Infinite-loop teleport logic
+//     useEffect(() => {
+//         if (!sliderRef.current) return;
+
+//         // Reached after last clone
+//         if (current === extendedSlides.length - 1) {
+//             setTimeout(() => {
+//                 resetTransition();
+//                 setCurrent(1);
+//             }, 450);
+//         }
+
+//         // Reached before first clone
+//         if (current === 0) {
+//             setTimeout(() => {
+//                 resetTransition();
+//                 setCurrent(slides.length);
+//             }, 450);
+//         }
+//     }, [current]);
+
+//     /** -----------------------------------
+//      *  RENDER
+//      * -----------------------------------**/
+
+//     return (
+//         <div className="relative sm:h-[480px] w-full bg-[#f0fbfc] flex justify-center items-center px-5 overflow-hidden">
+
+//             {/* Prev Button */}
+//             <button
+//                 onClick={handlePrev}
+//                 className="absolute z-20 left-5 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center border border-[#3a7c92] rounded-full cursor-pointer"
+//             >
+//                 <img
+//                     src="/arrow.svg"
+//                     alt="arrow"
+//                     className="w-full h-full block -rotate-90 ml-2.5"
+//                 />
+//             </button>
+
+//             {/* Slider */}
+//             <div className="max-w-5xl w-full overflow-hidden">
+//                 <div
+//                     ref={sliderRef}
+//                     style={{
+//                         transform: `translateX(-${current * slideWidth}px)`,
+//                     }}
+//                     className="flex"
+//                 >
+//                     {extendedSlides.map((slide, i) => (
+//                         <div
+//                             key={i}
+//                             className="min-w-full h-[400px] flex items-center justify-center bg-[#d9eef2]"
+//                         >
+//                             <h1 className="text-3xl font-bold">{slide.heading}</h1>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+
+//             {/* Next Button */}
+//             <button
+//                 onClick={handleNext}
+//                 className="absolute z-20 right-5 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center border border-[#3a7c92] rounded-full cursor-pointer"
+//             >
+//                 <img
+//                     src="/arrow.svg"
+//                     alt="arrow"
+//                     className="w-full h-full block rotate-90 mr-3"
+//                 />
+//             </button>
+//         </div>
+//     );
+// };
+
+// export default AICrousal;
+
+
+
+
 "use client"
 import Image from 'next/image'
 /* eslint-disable @next/next/no-img-element */
@@ -40,14 +228,12 @@ const CardsCrousal = () => {
       h: 400
     },
   ]
-  let intervalRef = useRef(null)
   const [currentSlide, setCurrentSlide] = useState(1)
-  const [slideWidth, setSlideWidth] = useState(0)
   let sliderRef = useRef(null)
   console.log(currentSlide);
 
   function handlePrevious() {
-    if (intervalRef.current) clearInterval(intervalRef.current) // stopping auto sliding
+    console.log('previous');
     if (currentSlide === 1) {
       setCurrentSlide(currentSlide - 1)
       setTimeout(() => {
@@ -55,159 +241,105 @@ const CardsCrousal = () => {
         setCurrentSlide(slides.length)
         setTimeout(() => {
           sliderRef.current.style.transition = `transform 0.5s ease-in-out`
-        }, 100);
+        }, 50);
       }, 500);
     } else {
       setCurrentSlide(currentSlide - 1)
     }
-    startAutoPlay() // starting the auto sliding
   }
   function handleNext() {
-    if (intervalRef.current) clearInterval(intervalRef.current) // stopping auto sliding
+    console.log('next');
     if (currentSlide === slides.length) {
       setCurrentSlide(currentSlide + 1)
       setTimeout(() => {
-        if (!sliderRef.current) return
         sliderRef.current.style.transition = `transform 0s`
         setCurrentSlide(1)
         setTimeout(() => {
           sliderRef.current.style.transition = `transform 0.5s ease-in-out`
-        }, 100);
+        }, 50);
       }, 500);
     } else {
       setCurrentSlide(currentSlide + 1)
     }
-    startAutoPlay() // starting the auto sliding
   }
 
-  // auto play function
-  function startAutoPlay() {
-    intervalRef.current = setInterval(() => {
-      handleNext(); // just call handleNext(), don’t wrap in setCurrentSlide
-    }, 5000);
-  }
-
-  // useEffect(() => {
-  //   startAutoPlay()
-  //   return () => clearInterval(intervalRef.current);
-  // }, [currentSlide])
-
-  // responsive slide width
   useEffect(() => {
-    function updateSize() {
-      if (sliderRef.current && sliderRef.current.children[1]) {
-        setSlideWidth(sliderRef.current.children[1].offsetWidth)
-      }
-    }
-    updateSize() // run once when mounted
+    const interval = setInterval(() => {
+      handleNext(); // just call handleNext(), don’t wrap in setCurrentSlide
+    }, 5000); // change slide every 3 seconds
 
-    window.addEventListener("resize", updateSize);
-
-    return () => {
-      window.removeEventListener("resize", updateSize);
-    }
-  }, [])
-
+    return () => clearInterval(interval);
+  }, [currentSlide])
 
   return (
-    <div className='relative sm:h-[480px] w-full bg-[#f0fbfc] flex justify-center items-center sm:gap-10 px-5'>
+    <div className='relative md:h-[480px] w-full bg-[#f0fbfc] flex justify-center items-center sm:gap-10 px-5'>
       <button
         onClick={handlePrevious}
         className='absolute z-20 left-5 top-1/2 md:relative md:left-0 md:top-0 w-10 h-10 flex items-center justify-center border border-[#3a7c92] rounded-full cursor-pointer'>
         <img src="/arrow.svg" alt="arrow" className='w-full h-full block -rotate-90 ml-2.5' />
       </button>
 
-      <div className='max-w-5xl w-full h-auto overflow-x-hidden flex justify-center items-center overflow-y-hidden'>
+      <div className='max-w-[1032px] w-full h-auto overflow-x-hidden flex items-center overflow-y-hidden'>
         {/* slides wrapper */}
         <div ref={sliderRef}
           style={{
-            transform: `translateX(-${currentSlide * slideWidth}px)`
+            transform: `translateX(-${currentSlide * 100}%)`
           }}
-          className={`w-full flex transition-all duration-500 ease`}>
-
-          {/* clone slide before */}
-          <div className={`box-border w-full shrink-0 grid grid-cols-1 lg:grid-cols-2 grid-rows-1 align-items-center`}>
-            <div className='col-span-6 space-y-1 lg:pt-5'>
-              {/* heading */}
-              <h1 className={`text-[clamp(25px,5vw,52px)] leading-[clamp(25px,5vw,50px)] max-w-160 text-[#4e9eb8] font-extrabold text-center sm:text-start text-wrap`}>
-                {slides[slides.length - 1].heading}
-              </h1>
-              {/* description */}
-              <p className={`text-[clamp(1rem,5vw,22px)] max-w-160 font-normal text-wrap lg:pb-3`}>
-                {slides[slides.length - 1].description}
-              </p>
-              {/* button */}
-              <button className='btnYellow max-w-50 text-[1rem] w-full py-2 rounded-lg'>
-                Get Started for Free
-              </button>
-            </div>
-
-            <div className='grid-cols-6 grid-rows-1'>
-              <div className='relative w-full h-full col-span-3'>
-                <Image src={slides[slides.length - 1].image} alt='image' fill className='object-contain' />
+          className={`w-full h-full flex justify-between items-center transition-all duration-500 ease-in-out`}>
+          {/* clone slide */}
+          <div className='shrink-0 my-5 w-full h-full flex flex-col-reverse md:flex-row md:justify-between items-center'>
+            <div className='w-fit h-full flex flex-col items-center md:items-start'>
+              <div className={`sm:max-w-[540px]`}>
+                <h1 className={`mb-3 text-[clamp(30px,2vw,42px)] leading-[clamp(30px,2.5vw,50px)] text-center md:text-start text-wrap font-extrabold text-[#4e9eb8]`}>{slides[slides.length - 1].heading}</h1>
               </div>
+              <div className='sm:max-w-[540px]'>
+                <p className='sm:text-[clamp(18px,1.5vw,22px)] sm:leading-[clamp(20px,2.5vw,30px)] text-center md:text-start font-normal text-wrap'>{slides[slides.length - 1].description}</p>
+              </div>
+              <button className='w-[190px] sm:w-[220px] h-[48px] bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
+            </div>
+            <div className='relative shrink-0 w-[320px] sm:w-[clamp(360px,25vw,480px)] h-90'>
+              <Image src={slides[slides.length - 1].image} alt='image' fill className='object-contain' />
             </div>
           </div>
 
           {slides.map((slide, index) => {
             return (
-              <div key={index} className={`box-border w-full shrink-0 grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 align-items-center px-8`}>
-                <div className='space-y-1 lg:pt-5'>
-                  {/* heading */}
-                  <h1 className={`${index === 4
-                    ? 'text-[clamp(25px,5vw,52px)] leading-[clamp(25px,5vw,50px)] max-w-150 '
-                    : 'text-[clamp(30px,7vw,108px)] '
-                    } text-[#4e9eb8] font-extrabold text-center sm:text-start text-wrap`}>
-                    {slide.heading}
-                  </h1>
-                  {/* description */}
-                  <p className={`${index === 4
-                    ? 'max-w-150'
-                    : ''} 
-                    font-normal text-[clamp(1rem,2.5vw,22px)] text-center sm:text-start text-wrap lg:pb-3`}>
-                    {slide.description}
-                  </p>
-                  {/* button */}
-                  <button className='btnYellow max-w-50 text-[1rem] w-full py-2 rounded-lg'>
-                    Get Started for Free
-                  </button>
-                </div>
-
-                <div className='grid-cols-6 grid-rows-1'>
-                  <div className='shrink-0 relative w-full h-full col-span-3'>
-                    <Image src={slide.image} alt='image' fill className='object-contain' />
+              <div key={index}
+                className='shrink-0 my-5 w-full h-full flex flex-col-reverse md:flex-row md:justify-between items-center'>
+                <div className='w-fit h-full flex flex-col items-center md:items-start'>
+                  <div className={`sm:max-w-[540px]`}>
+                    <h1 className={`${index === 4 ? 'mb-3 text-[clamp(30px,2vw,42px)] leading-[clamp(30px,2.5vw,50px)] text-center md:text-start text-wrap font-extrabold text-[#4e9eb8]' : 'text-[35px] md:text-[clamp(30px,5vw,108px)]'} font-extrabold text-[#4e9eb8]`}>{slide.heading}</h1>
                   </div>
+                  <div className={`sm:max-w-[540px]`}>
+                    <p className='sm:text-[clamp(18px,1.5vw,22px)] sm:leading-[clamp(20px,2.5vw,30px)] text-center md:text-start font-normal text-wrap'>{slide.description}</p>
+                  </div>
+                  <button className='w-[190px] sm:w-[220px] h-12 bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
+                </div>
+                <div className='relative shrink-0 w-[320px] sm:w-[clamp(360px,25vw,480px)] h-90'>
+                  <Image src={slide.image} alt='image' fill className='object-contain' />
                 </div>
               </div>
             )
           })
           }
-          {/* clone slide after */}
-          <div className={`box-border w-full shrink-0 grid grid-cols-1 md:grid-cols-2 grid-rows-1 align-items-center`}>
-            <div className='space-y-1 lg:pt-5'>
-              {/* heading */}
-              <h1 className={`text-[clamp(30px,7vw,108px)] text-[#4e9eb8] font-extrabold text-center sm:text-start text-wrap`}>
-                {slides[0].heading}
-              </h1>
-              {/* description */}
-              <p className={`text-[clamp(1rem,2.5vw,22px)] text-center sm:text-start font-normal text-wrap lg:pb-3`}>
-                {slides[0].description}
-              </p>
-              {/* button */}
-              <button className='btnYellow max-w-50 text-[1rem] w-full py-2 rounded-lg'>
-                Get Started for Free
-              </button>
-            </div>
-
-            <div className='col-span-6 grid-cols-6 grid-rows-1'>
-              <div className='relative w-full h-full col-span-3'>
-                <Image src={slides[0].image} alt='image' fill className='object-contain' />
+          {/* clone slide */}
+          <div className='shrink-0 my-5 w-full h-full flex flex-col-reverse md:flex-row md:justify-between items-center'>
+            <div className='w-fit h-full flex flex-col items-center md:items-start'>
+              <div className={`sm:max-w-[540px]`}>
+                <h1 className={`text-[35px] md:text-[clamp(30px,5vw,108px)] font-extrabold text-[#4e9eb8] text-center md:text-start`}>{slides[0].heading}</h1>
               </div>
+              <div className={`sm:max-w-[540px]`}>
+                <p className='sm:text-[clamp(18px,1.5vw,22px)] sm:leading-[clamp(20px,2.5vw,30px)] text-center md:text-start font-normal text-wrap'>{slides[0].description}</p>
+              </div>
+              <button className='w-[190px] sm:w-[220px] h-[48px] bg-[#febe10]/90 hover:bg-[#febe10] transition duration-100 rounded-[12px] mt-7 sm:text-[20px] font-medium cursor-pointer'>Get Started for Free</button>
+            </div>
+            <div className='relative shrink-0 w-[320px] sm:w-[clamp(360px,25vw,480px)] h-90'>
+              <Image src={slides[0].image} alt='image' fill className='object-contain' />
             </div>
           </div>
 
         </div >
-      </div >
+      </div>
 
       <button
         onClick={handleNext}
@@ -220,4 +352,3 @@ const CardsCrousal = () => {
 }
 
 export default CardsCrousal
-

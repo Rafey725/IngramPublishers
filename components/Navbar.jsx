@@ -46,9 +46,9 @@ const Navbar = () => {
                     </div>
                     {/* links */}
                     <ul className='hidden lg:flex gap-4 text-[14px] font-normal font-[sans-serif]'>
-                        <a href="#" className='text-[#3a7c92]'>Create Account</a>
-                        <a href="#" className='text-[#505050]'>Login</a>
-                        <a href="#" className='text-[#505050]'>Help</a>
+                        <Link href="/create-account" className='text-[#3a7c92]'>Create Account</Link>
+                        <Link href="/login" className='text-[#505050]'>Login</Link>
+                        <Link href="/help" className='text-[#505050]'>Help</Link>
                     </ul>
                 </div>
             </div>
@@ -67,7 +67,7 @@ const Navbar = () => {
 
             {/* hamburger dropdown */}
             <ul
-                className={`ham-dropdown absolute z-50 overflow-x-hidden w-full transition-height duration-300 top-full right-0 bg-white shadow-sm text-nowrap ${hamburgerDrop ? ' pointer-events-auto h-[348px] ' : ' pointer-events-none h-0 '}`}>
+                className={`ham-dropdown absolute z-50 overflow-x-hidden w-full transition-height duration-300 top-full right-0 bg-white shadow-sm text-nowrap ${hamburgerDrop ? ' pointer-events-auto h-[412px] ' : ' pointer-events-none h-0 '}`}>
                 <li onClick={() => handleDropdown("home")} className='hover:bg-[#f6f6f6] w-full px-6 py-3 border-y border-black/10 font-semibold'>
                     <Link href={"/"} className='w-full h-full inline-block'>Home</Link>
                 </li>
@@ -160,7 +160,17 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </li>
-
+                {/* login */}
+                <li className='w-full border-y border-black/10 cursor-pointer'>
+                    <Link href={"/login"} className='w-full h-full px-6 py-3 inline-block hover:bg-[#f6f6f6] font-semibold'>Login</Link>
+                </li>
+                {/* create account */}
+                <li className='w-full border-y border-black/10 cursor-pointer'>
+                    <Link href={"/create-account"} className='w-full h-full px-6 py-3 inline-block hover:bg-[#f6f6f6] font-semibold'>Create Account</Link>
+                </li>
+                <div>
+                    <input type="search" placeholder='' />
+                </div>
             </ul>
 
             {/* navbar links */}
