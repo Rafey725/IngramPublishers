@@ -36,6 +36,14 @@ const nextConfig = {
         source: '/book-building-tool',
         destination: '/publish/book-building-tool',
       },
+      {
+        source: '/plan-your-book/book-options',
+        destination: '/publish/plan-your-book/book-options',
+      },
+      {
+        source: '/plan-your-book/ebooks',
+        destination: '/publish/plan-your-book/ebooks',
+      },
     ];
   },
 };

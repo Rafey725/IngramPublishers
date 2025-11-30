@@ -182,7 +182,7 @@ const BookBuildingToolsComp = () => {
                   testimonials.map((testimo, idx) => {
                     return (
                       <div key={idx} className='shrink-0 w-full h-full flex flex-col'>
-                        <p className='sm:text-[18px] mt-5 mb-4'>{testimo.quote}</p>
+                        <p className='sm:text-[18px] leading-[20px] mt-5 mb-4'>{testimo.quote}</p>
                         <p className='text-[22px] sm:text-[24px] font-bold text-[#4e9eb8]'>{testimo.author}</p>
                         <p className='sm:text-[18px] leading-[20px] font-normal italic text-[#505050] '>{testimo.artistOf}</p>
                       </div>
