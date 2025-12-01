@@ -44,6 +44,14 @@ const nextConfig = {
         source: '/plan-your-book/ebooks',
         destination: '/publish/plan-your-book/ebooks',
       },
+      {
+        source: '/promote-my-book',
+        destination: '/promote/promote-my-book',
+      },
+      {
+        source: '/how-to-market-book',
+        destination: '/promote/how-to-market-book',
+      },
     ];
   },
 };

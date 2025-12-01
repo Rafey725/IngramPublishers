@@ -63,7 +63,7 @@ const Navbar = () => {
             <div className='bg-white w-full flex justify-center h-[70px]'>
                 <div className='flex justify-between items-center lg:max-w-[76vw] w-full h-full'>
                     <Link href={"/"}>
-                        <div className='relative w-[250px] h-11'>
+                        <div className='relative w-50 sm:w-[250px] h-11'>
                             <Image src='/IngramLogo.png' alt='logo' fill sizes="(max-width: 768px), 50vw, 200px" className='object-contain' />
                         </div>
                     </Link>
@@ -131,10 +131,10 @@ const Navbar = () => {
                     {/* sub dropdown */}
                     <ul className={`w-full text-black/70 overflow-hidden transition-all duration-300 ${dropDownName === "promote" ? 'max-h-[460px]' : 'max-h-0'}`}>
                         <li className='hover:bg-[#f6f6f6] w-full px-12 py-3 border-y border-black/10 '>
-                            <Link href={"/how-it-works"} className='w-full h-full inline-block'>Promote My Book</Link>
+                            <Link href={"/promote-my-book"} className='w-full h-full inline-block'>Promote My Book</Link>
                         </li>
                         <li className='hover:bg-[#f6f6f6] w-full px-12 py-3 border-t border-black/10 '>
-                            <Link href={"/how-it-works"} className='w-full h-full inline-block'>How to Market a Book</Link>
+                            <Link href={"/how-to-market-book"} className='w-full h-full inline-block'>How to Market a Book</Link>
                         </li>
                     </ul>
                 </li>
@@ -197,8 +197,8 @@ const Navbar = () => {
             </ul>
 
             {/* navbar links */}
-            <div className='w-full h-[60px]'>
-                <div ref={stickyNarBar} className={`${isSticky ? 'fixed top-0 left-0' : 'relative'} z-200 hidden lg:flex justify-center items-center bg-[#3a7c92] text-white w-full h-[60px]`}>
+            <div className='w-full h-[60px] hidden lg:flex'>
+                <div ref={stickyNarBar} className={`${isSticky ? 'fixed top-0 left-0' : 'relative'} z-200 flex justify-center items-center bg-[#3a7c92] text-white w-full h-[60px]`}>
                     <div className='flex justify-between items-center max-w-[76vw] w-full h-full'>
                         <div className='flex items-center w-full h-full'>
                             <ul className='flex gap-2 items-center font-[sans-serif] h-full'>
@@ -233,9 +233,9 @@ const Navbar = () => {
                                     {/* dropdown */}
                                     <ul className='absolute z-0 group-hover:z-30 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto  w-[210px] transition-all duration-200 top-full left-0 bg-[#3a7c92] text-nowrap '>
                                         <li className='hover:bg-[#4e9eb8] w-full px-6 py-2.5 border-b border-[#4e9eb8]'>
-                                            <Link href={"/how-it-works"} className='w-full h-full inline-block'>Promote My Book</Link></li>
+                                            <Link href={"/promote-my-book"} className='w-full h-full inline-block'>Promote My Book</Link></li>
                                         <li className='hover:bg-[#4e9eb8] w-full px-6 py-2.5 border-b border-[#4e9eb8]'>
-                                            <Link href={"/how-it-works"} className='w-full h-full inline-block'>How to Market a Book</Link></li>
+                                            <Link href={"/how-to-market-book"} className='w-full h-full inline-block'>How to Market a Book</Link></li>
                                     </ul>
                                 </li>
                                 <li className='group relative tracking-wide cursor-pointer w-full h-full px-3.5 flex items-center hover:bg-[#4e9eb8] '>Sell

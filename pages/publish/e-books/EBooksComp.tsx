@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import PublishHeroBanner from '@/components/PublishHeroBanner'
 import Image from 'next/image'
@@ -97,7 +98,7 @@ const EBooksComp = () => {
 
           {/* Content */}
           <div className='flex-1'>
-            <h2 className='text-[clamp(24px,4vw,32px)] leading-[clamp(25px,2.5vw,38px)] font-bold mb-4'>
+            <h2 className='text-[clamp(24px,4vw,32px)] leading-[clamp(28px,2.5vw,38px)] font-bold mb-4'>
               See Where Your Ebook Could Be Sold with IngramSpark
             </h2>
             <p className='text-[#666] mb-6'>
