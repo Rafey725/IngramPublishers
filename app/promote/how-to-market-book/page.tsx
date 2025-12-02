@@ -9,10 +9,10 @@ export const metadata = {
     }
 };
 
-const LoginPage = () => {
+const HowToMarketBook = () => {
     return (
         <HowToMarketBookComp />
     )
 }
 
-export default LoginPage
+export default HowToMarketBook

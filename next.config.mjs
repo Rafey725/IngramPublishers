@@ -52,6 +52,14 @@ const nextConfig = {
         source: '/how-to-market-book',
         destination: '/promote/how-to-market-book',
       },
+      {
+        source: '/distribution',
+        destination: '/sell/distribution',
+      },
+      {
+        source: '/share-and-sell',
+        destination: '/sell/share-and-sell',
+      },
     ];
   },
 };

@@ -143,10 +143,10 @@ const Navbar = () => {
                     {/* sub dropdown */}
                     <ul className={`w-full text-black/70 overflow-hidden transition-all duration-300 ${dropDownName === "sell" ? 'max-h-[460px]' : 'max-h-0'}`}>
                         <li className='hover:bg-[#f6f6f6] w-full px-12 py-3 border-y border-black/10 '>
-                            <Link href={"/how-it-works"} className='w-full h-full inline-block'>Distribution</Link>
+                            <Link href={"/distribution"} className='w-full h-full inline-block'>Distribution</Link>
                         </li>
                         <li className='hover:bg-[#f6f6f6] w-full px-12 py-3 border-t border-black/10 '>
-                            <Link href={"/how-it-works"} className='w-full h-full inline-block'>Share & Sell</Link>
+                            <Link href={"/share-and-sell"} className='w-full h-full inline-block'>Share & Sell</Link>
                         </li>
                     </ul>
                 </li>
@@ -197,8 +197,8 @@ const Navbar = () => {
             </ul>
 
             {/* navbar links */}
-            <div className='w-full h-[60px] hidden lg:flex'>
-                <div ref={stickyNarBar} className={`${isSticky ? 'fixed top-0 left-0' : 'relative'} z-200 flex justify-center items-center bg-[#3a7c92] text-white w-full h-[60px]`}>
+            <div className='max-w-screen w-full h-[60px] hidden lg:flex'>
+                <div ref={stickyNarBar} className={`${isSticky ? 'fixed top-0 left-0' : 'relative'} z-200 max-w-screen flex justify-center items-center bg-[#3a7c92] text-white w-full h-[60px]`}>
                     <div className='flex justify-between items-center max-w-[76vw] w-full h-full'>
                         <div className='flex items-center w-full h-full'>
                             <ul className='flex gap-2 items-center font-[sans-serif] h-full'>
@@ -242,9 +242,9 @@ const Navbar = () => {
                                     {/* dropdown */}
                                     <ul className='absolute z-0 group-hover:z-30 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto  w-[140px] transition-all duration-200 top-full left-0 bg-[#3a7c92] text-nowrap '>
                                         <li className='hover:bg-[#4e9eb8] w-full px-6 py-2.5 border-b border-[#4e9eb8]'>
-                                            <Link href={"/how-it-works"} className='w-full h-full inline-block'>Distribution</Link></li>
+                                            <Link href={"/distribution"} className='w-full h-full inline-block'>Distribution</Link></li>
                                         <li className='hover:bg-[#4e9eb8] w-full px-6 py-2.5 border-b border-[#4e9eb8]'>
-                                            <Link href={"/how-it-works"} className='w-full h-full inline-block'>Share & Sell</Link></li>
+                                            <Link href={"/share-and-sell"} className='w-full h-full inline-block'>Share & Sell</Link></li>
                                     </ul>
                                 </li>
                                 <li className='group relative tracking-wide cursor-pointer w-full h-full px-3 flex items-center hover:bg-[#4e9eb8] '>Print

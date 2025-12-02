@@ -10,10 +10,10 @@ export const metadata = {
     }
 };
 
-const LoginPage = () => {
+const PromteMyBook = () => {
   return (
     <PromteMyBookComp />
   )
 }
 
-export default LoginPage
+export default PromteMyBook

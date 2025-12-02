@@ -17,7 +17,7 @@ const PublishHeroBanner = (props: PublishHeroBannerProps) => {
         <div
             style={{ backgroundColor: props.bgColor }}
             className={`h-auto md:h-[375px] w-full flex justify-center items-center py-8`}>
-            <div className='max-w-[1170px] w-full h-full flex mx-30 px-3 md:mx-7 lg:mx-10 gap-y-5 flex-col-reverse md:flex-row justify-between items-center'>
+            <div className='max-w-[1170px] w-full h-full flex px-3 md:mx-7 lg:mx-10 gap-y-5 flex-col-reverse md:flex-row justify-between items-center'>
                 <div className='h-full flex flex-col items-center sm:items-start justify-center max-w-161'>
                     <h1 className='text-[clamp(25px,5vw,52px)] text-center md:text-start leading-[clamp(35px,5vw,60px)] font-extrabold text-[#4e9eb8] mb-2'>{props.heading}</h1>
                     <p className='sm:text-[18px] text-center sm:text-start  md:text-[20px] lg:text-[22px] max-w-140'>{props.description}</p>
@@ -25,7 +25,7 @@ const PublishHeroBanner = (props: PublishHeroBannerProps) => {
                         {props.gotoLink ? <Link href={props.gotoLink}>Publish Today</Link> : "Publish Today"}
                     </button>}
                 </div>
-                <div className='relative shrink-0 w-80 sm:w-90 h-73 sm:mr-10'>
+                <div className='relative shrink-0 w-full sm:w-90 h-73 sm:mr-10'>
                     <Image src={props.image} alt="image" fill className={`object-contain xl:scale-115`} />
                 </div>
             </div>
