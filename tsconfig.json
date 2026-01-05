@@ -38,10 +38,12 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/publish/how-to-self-publish/8Steps-SelfPublish/SelfPublishingSteps.jsx",
-    "components/ProvidedApp.jsx",
-    "app/store.ts"
-, "components/StickyBar.jsx", "components/Cards-Crousal.jsx"  ],
+    "screens/publish/how-to-self-publish/8Steps-SelfPublish/SelfPublishingSteps.jsx",
+    "app/ProvidedApp.jsx",
+    "app/store.ts",
+    "components/StickyBar.jsx",
+    "components/Cards-Crousal.jsx"
+  ],
   "exclude": [
     "node_modules"
   ]

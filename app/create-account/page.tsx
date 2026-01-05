@@ -1,4 +1,4 @@
-import CreateAccountComp from '@/pages/create-account/CreateAccountComp'
+import CreateAccountComp from '@/screens/create-account/CreateAccountComp'
 import React from 'react'
 
 export const metadata = {

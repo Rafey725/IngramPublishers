@@ -1,5 +1,5 @@
 import React from 'react'
-import HowToSelfPublishComp from '@/pages/publish/how-to-self-publish/HowToSelfPublishComp';
+import HowToSelfPublishComp from '@/screens/publish/how-to-self-publish/HowToSelfPublishComp';
 
 export const metadata = {
     title: "How to Self Publish a Book",

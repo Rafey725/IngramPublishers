@@ -1,4 +1,4 @@
-import EBooksComp from '@/pages/publish/e-books/EBooksComp';
+import EBooksComp from '@/screens/publish/e-books/EBooksComp';
 import React from 'react'
 
 export const metadata = {

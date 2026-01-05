@@ -1,5 +1,5 @@
 
-import DistributionComp from '@/pages/sell/distribution/DistributionComp';
+import DistributionComp from '@/screens/sell/distribution/DistributionComp';
 import React from 'react'
 
 export const metadata = {

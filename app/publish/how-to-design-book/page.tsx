@@ -1,5 +1,5 @@
 import React from 'react'
-import HowToDesignBookComp from '@/pages/publish/how-to-design-book/HowToDesignBookComp';
+import HowToDesignBookComp from '@/screens/publish/how-to-design-book/HowToDesignBookComp';
 
 export const metadata = {
     title: "The Ultimate Guide to Master Your Book Cover Design | IngramPublishers",

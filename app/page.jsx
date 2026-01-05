@@ -1,4 +1,4 @@
-import HomeComp from '@/pages/home/HomeComp'
+import HomeComp from '@/screens/home/HomeComp';
 
 export const metadata = {
     title: "IngramPublishers: Self-Publishing Book Company | Print & Distribute ",

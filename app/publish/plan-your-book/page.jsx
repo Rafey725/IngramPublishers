@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import PlanYourBookComp from '@/pages/publish/plan-your-book/PlanYourBookComp';
+import PlanYourBookComp from '@/screens/publish/plan-your-book/PlanYourBookComp';
 
 
 export const metadata = {

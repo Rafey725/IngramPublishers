@@ -1,4 +1,4 @@
-import HowToMarketBookComp from '@/pages/promote/how-to-market-book/HowToMarketBookComp';
+import HowToMarketBookComp from '@/screens/promote/how-to-market-book/HowToMarketBookComp';
 import React from 'react'
 
 export const metadata = {

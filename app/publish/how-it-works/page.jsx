@@ -2,7 +2,7 @@
 import PublishHeroBanner from '@/components/PublishHeroBanner'
 import Image from 'next/image';
 import React from 'react'
-import HowItWorksComp from '@/pages/publish/how-it-works/HowItWorksComp';
+import HowItWorksComp from '@/screens/publish/how-it-works/HowItWorksComp';
 
 export const metadata = {
     title: "How it Works: Publish Like a Pro | IngramPublishers",

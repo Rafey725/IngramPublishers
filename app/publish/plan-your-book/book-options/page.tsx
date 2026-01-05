@@ -1,4 +1,4 @@
-import BookOptionsComp from '@/pages/publish/book-options/BookOptionsComp';
+import BookOptionsComp from '@/screens/publish/book-options/BookOptionsComp';
 import React from 'react'
 
 export const metadata = {

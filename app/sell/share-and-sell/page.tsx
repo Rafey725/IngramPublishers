@@ -1,5 +1,4 @@
-
-import ShareAndSellComp from '@/pages/sell/share-and-sell/ShareAndSellComp';
+import ShareAndSellComp from '@/screens/sell/share-and-sell/ShareAndSellComp';
 import React from 'react'
 
 export const metadata = {
